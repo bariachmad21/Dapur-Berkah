@@ -42,6 +42,10 @@
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
         }
+        /* Ensure grid items have equal height */
+        #product-grid {
+            grid-auto-rows: 1fr;
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -52,10 +56,10 @@
             <a href="#" class="text-2xl font-bold text-teal-600">Dapur Berkah Ummah</a>
             <nav class="hidden md:flex space-x-8 items-center">
                 <a href="#produk" class="text-gray-600 hover:text-teal-600 transition duration-300">Produk</a>
-                <a href="#promo-emas" class="text-gray-600 hover:text-teal-600 transition duration-300">Nabung Emas</a>
+                <a href="#jumat-berkah" class="text-gray-600 hover:text-teal-600 transition duration-300">Jumat Berkah</a>
                 <a href="#tentang" class="text-gray-600 hover:text-teal-600 transition duration-300">Tentang Kami</a>
             </nav>
-            <a href="https://wa.me/628128124789?text=Halo%20Admin%20Dapur%20Berkah%20Ummah,%20saya%20ingin%20bertanya." target="_blank" class="hidden md:block bg-teal-500 text-white font-semibold px-6 py-2 rounded-full hover:bg-teal-600 transition duration-300 transform hover:scale-105">Hubungi Admin</a>
+            <a href="https://wa.me/6281513587613?text=Halo%20Admin%20Dapur%20Berkah%20Ummah,%20saya%20ingin%20bertanya." target="_blank" class="hidden md:block bg-teal-500 text-white font-semibold px-6 py-2 rounded-full hover:bg-teal-600 transition duration-300 transform hover:scale-105">Hubungi Admin</a>
             <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
                 <i class="fas fa-bars text-xl"></i>
             </button>
@@ -63,9 +67,9 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="#produk" class="block py-2 text-gray-600 hover:text-teal-600">Produk</a>
-            <a href="#promo-emas" class="block py-2 text-gray-600 hover:text-teal-600">Nabung Emas</a>
+            <a href="#jumat-berkah" class="block py-2 text-gray-600 hover:text-teal-600">Jumat Berkah</a>
             <a href="#tentang" class="block py-2 text-gray-600 hover:text-teal-600">Tentang Kami</a>
-            <a href="https://wa.me/628128124789?text=Halo%20Admin%20Dapur%20Berkah%20Ummah,%20saya%20ingin%20bertanya." target="_blank" class="mt-4 block w-full text-center bg-teal-500 text-white font-semibold px-6 py-2 rounded-full hover:bg-teal-600 transition duration-300">Hubungi Admin</a>
+            <a href="https://wa.me/6281513587613?text=Halo%20Admin%20Dapur%20Berkah%20Ummah,%20saya%20ingin%20bertanya." target="_blank" class="mt-4 block w-full text-center bg-teal-500 text-white font-semibold px-6 py-2 rounded-full hover:bg-teal-600 transition duration-300">Hubungi Admin</a>
         </div>
     </header>
 
@@ -102,7 +106,7 @@
                         <span class="absolute inset-y-0 left-0 flex items-center pl-4">
                             <i class="fas fa-search text-gray-400"></i>
                         </span>
-                        <input id="search-input" type="text" placeholder="Cari produk (misal: Risoles, Peyek...)" class="w-full py-3 pl-12 pr-4 text-gray-700 bg-white border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500 transition">
+                        <input id="search-input" type="text" placeholder="Cari produk (misal: Basreng, Peyek...)" class="w-full py-3 pl-12 pr-4 text-gray-700 bg-white border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-500 transition">
                     </div>
                 </div>
 
@@ -114,18 +118,52 @@
             </div>
         </section>
 
-        <!-- Gold Promo Section -->
-        <section id="promo-emas" class="py-20 bg-gray-800 text-white">
+        <!-- Jumat Berkah Section -->
+        <section id="jumat-berkah" class="py-20 bg-teal-50">
             <div class="container mx-auto px-6">
-                <div class="bg-gray-900 rounded-xl shadow-2xl overflow-hidden md:flex items-center">
-                    <div class="md:w-1/2 p-8 md:p-12">
-                        <span class="text-sm font-semibold text-amber-400 uppercase">Investasi Masa Depan</span>
-                        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Mulai Disiplin Menabung Emas</h2>
-                        <p class="text-gray-300 mb-6">Nggak perlu langkah besar, cukup konsisten menabung sekali sebulan. Setiap gram emas yang kamu simpan hari ini, adalah langkah kecil menuju masa depan yang lebih aman dan sejahtera. Lindungi nilai kekayaanmu dari inflasi!</p>
-                        <a href="https://wa.me/628128124789?text=Halo,%20saya%20tertarik%20untuk%20mulai%20menabung%20emas.%20Mohon%20info%20lebih%20lanjut." target="_blank" class="inline-block bg-amber-500 text-gray-900 font-bold px-8 py-3 rounded-full text-lg hover:bg-amber-400 transition duration-300 transform hover:scale-105 shadow-lg">Mulai Sekarang <i class="fas fa-gem ml-2"></i></a>
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gray-800">Program Jumat Berkah</h2>
+                    <p class="text-gray-600 mt-2">Mari berbagi kebaikan di hari yang penuh berkah.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Product Card 1: Roti Berkah -->
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden group flex flex-col">
+                        <div class="overflow-hidden">
+                            <img src="roti.jpg" alt="Roti Berkah" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/d1fae5/065f46?text=Roti+Berkah';">
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-bold">Roti Berkah</h3>
+                                <p class="text-gray-500 text-sm">oleh Ibu Sari Yahya</p>
+                                <p class="text-gray-600 text-sm mt-2">Roti unyil isi 3 pcs aneka rasa.</p>
+                                <p class="text-teal-600 font-bold text-lg mt-2 mb-1">Rp7.500 / paket</p>
+                                <p class="text-gray-600 text-sm mt-1">Minimal pemesanan 5 paket (Rp37.500).</p>
+                                <p class="text-xs text-gray-500 mt-3 pt-2 border-t">Pembayaran ke Bank BCA: <br><span class="font-semibold text-base">8690233208</span> a/n Rohany</p>
+                            </div>
+                            <a href="https://wa.me/6281513587613?text=Halo%20Ibu%20Sari%20Yahya,%20saya%20tertarik%20dengan%20produk%20*Roti%20Berkah*%20untuk%20program%20Jumat%20Berkah." target="_blank" class="w-full block text-center bg-teal-500 text-white font-semibold px-4 py-2 rounded-full hover:bg-teal-600 transition duration-300 mt-4">
+                                <i class="fab fa-whatsapp mr-2"></i> Pesan
+                            </a>
+                        </div>
                     </div>
-                     <div class="md:w-1/2 h-64 md:h-auto">
-                         <img src="emas.jpg" alt="Promo Emas" class="w-full h-full object-cover">
+
+                    <!-- Product Card 2: Nasi Berkah -->
+                    <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden group flex flex-col">
+                        <div class="overflow-hidden">
+                            <img src="chickenkatsu.jpg" alt="Nasi Berkah Chicken Katsu" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x400/d1fae5/065f46?text=Nasi+Berkah';">
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow">
+                            <div class="flex-grow">
+                                <h3 class="text-xl font-bold">Nasi Berkah Chicken Katsu</h3>
+                                <p class="text-gray-500 text-sm">oleh Bu Ayi</p>
+                                <p class="text-gray-600 text-sm mt-2">Paket nasi dan chicken katsu lezat, siap untuk dibagikan di hari Jumat.</p>
+                                <p class="text-teal-600 font-bold text-lg mt-2 mb-1">Rp15.000 / porsi</p>
+                                <p class="text-xs text-gray-500 mt-3 pt-2 border-t">Pembayaran ke Bank BCA: <br><span class="font-semibold text-base">8690233208</span> a/n Rohany</p>
+                            </div>
+                             <a href="https://wa.me/6281513587613?text=Halo%20Bu%20Ayi,%20saya%20tertarik%20dengan%20produk%20*Nasi%20Berkah%20Chicken%20Katsu*%20untuk%20program%20Jumat%20Berkah." target="_blank" class="w-full block text-center bg-teal-500 text-white font-semibold px-4 py-2 rounded-full hover:bg-teal-600 transition duration-300 mt-4">
+                                <i class="fab fa-whatsapp mr-2"></i> Pesan
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -139,7 +177,7 @@
                     Kegiatan ini bertujuan memberikan kesempatan bagi seluruh anggota untuk berjualan di grup MTQA. Saat ini, penjualan mungkin masih rendah dan jumlah penjual masih sedikit, namun kami percaya dengan dukungan bersama, kita dapat memperluas pasar dan meningkatkan penjualan untuk kesejahteraan bersama. Mari dukung produk teman!
                 </p>
                  <p class="mt-4 text-sm text-gray-500">
-                    *Saat ini kami menerapkan kebijakan untuk tidak menjual produk selain produk anggota MTQA. Profit sharing untuk MTQA bersifat seikhlasnya.
+                    *Saat ini kami menerapkan kebijakan untuk tidak menjual produk selain produk anggota MTQA. Profit sharing untuk MTQA sesuai skema yang sudah disepakati.
                 </p>
             </div>
         </section>
@@ -148,27 +186,79 @@
     <!-- Footer -->
     <footer id="kontak" class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-6 text-center">
-            <h3 class="text-2xl font-bold mb-2">Dapur Berkah Ummah</h3>
+            <h3 class="text-2xl font-bold mb-2">Dapur Ummah</h3>
             <p class="text-gray-400 mb-6">Wadah Kreasi dan Usaha Anggota MTQA</p>
-            <p class="text-gray-500 text-sm mt-8">&copy; 2024 Dapur Berkah Ummah (UMKM MTQA). Didukung Bersama. <br> Made by <a href="https://bariachmad21.github.io/Portfolio/" target="_blank" class="underline hover:text-teal-400 transition-colors duration-300">Barry</a> | 081223455709</p>
+            <p class="text-gray-500 text-sm mt-8">&copy; 2025 Dapur Berkah Ummah (UMKM MTQA). Didukung Bersama. <br> Made by <a href="https://barryachmad.github.io/Barry-Developer-Portfolio/" target="_blank" class="underline hover:text-teal-400 transition-colors duration-300">Barry</a> | 081223455709</p>
         </div>
     </footer>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // --- CARA MENGGANTI GAMBAR PRODUK ---
-            // 1. Untuk gambar online, upload foto ke situs seperti https://imgbb.com/ dan salin link gambarnya.
-            // 2. Untuk gambar lokal (seperti 'yoghurt.jpg'), pastikan file gambar berada di folder yang sama dengan file HTML ini.
-            // 3. Ganti link di bawah ini dengan link atau nama file gambar Anda.
-
+            // --- DAFTAR PRODUK ---
+            // Daftar produk diperbarui dengan harga.
             const products = [
-                { name: 'Yoghurt', seller: 'Bu Sari', image: 'yoghurt.jpg' },
-                { name: 'Kentang Mustofa', seller: 'Bu Nana', image: 'Kentang Mustofa.png' },
-                { name: 'Kering Teri', seller: 'Bu Nana', image: 'Kering Teri.png' },
-                { name: 'Putu Ayu', seller: 'Bu Giarti', image: 'kue putu ayu.jpg' },
-                { name: 'Chicken Roll', seller: 'Bu Uswah', image: 'Chicken Roll.jpg' },
-                { name: 'Peyek', seller: 'Bu Lis', image: 'peyek.jpg' },
-                { name: 'Sambal Pecel', seller: 'Bu Khun', image: 'sambal pecel.jpg' },
+                { 
+                    name: 'Yoghurt', 
+                    seller: 'Sari Yahya', 
+                    phone: '6281513587613',
+                    image: 'yoghurt.jpg', 
+                    description: 'Yoghurt Sehat, Segar, dan Bikin Hidup Lebih Balance kemasan 500ml.',
+                    price: 35000
+                },
+                {
+                    name: 'Peyek', 
+                    seller: 'Wahyu Sulistyorini', 
+                    phone: '6281513587613',
+                    image: 'peyek.jpg', 
+                    description: 'Dibuat berdasarkan PO. Varian: Kacang Tanah, Hijau & Rebon. Packing mika 23x23x7 cm.',
+                    price: 50000
+                },
+                { 
+                    name: 'Kentang Mustofa', 
+                    seller: 'Nana Tarigan', 
+                    phone: '6281513587613',
+                    image: 'Kentang Mustofa.png', 
+                    description: 'Kering kentang renyah dengan rasa pedas manis yang bikin nagih. Berat 250 gr.',
+                    price: 37500
+                },
+                { 
+                    name: 'Aneka Snack', 
+                    seller: 'Ayi', 
+                    phone: '6281513587613',
+                    image: 'chickenkatsu.jpg', 
+                    description: 'Aneka jajanan pasar untuk kebutuhan acaramu. Minimal pemesanan 5pcs.',
+                    price: 3500
+                },
+                { 
+                    name: 'Basreng', 
+                    seller: 'Riska Saastia', 
+                    phone: '6281513587613',
+                    image: 'basreng.jpg', 
+                    description: 'Basreng 250gr, Pas Buat Temen Nonton!. Varian rasa: original, pedas daun jeruk, dan pedas seblak.',
+                    price: 22000
+                },                
+                { 
+                    name: 'Teri Gemas', 
+                    seller: 'Nana Tarigan', 
+                    phone: '6281513587613',
+                    image: 'Kentang Mustofa.png', 
+                    description: 'Pesan Teri Gemas Sekarang, Nikmati Gurih-Pedasnya! Berat 250 gr.',
+                    price: 30000
+                },{ 
+                    name: 'Kapsul Temu Putih', 
+                    seller: 'Maya Kresna Wulandari', 
+                    phone: '6281513587613',
+                    image: 'kapsul.jpg', 
+                    description: 'Jaga Kesehatan Alami dengan Temu Putih! Isi 50 kapsul. Membantu menjaga imun, anti peradangan, dan melancarkan pencernaan.',
+                    price: 70000
+                },
+                { 
+                    name: 'Salad Buah', 
+                    seller: 'InGinShop', 
+                    phone: '6281513587613',
+                    image: 'salad buah.jpg', 
+                    description: 'Ngemil sehat dengan saus creamy.<br><br><b>Kemasan Thinwal:</b><br>300ml: Rp25.000<br>650ml: Rp45.000<br>750ml: Rp55.000<br>1000ml: Rp70.000<br>1500ml: Rp100.000<br>2000ml: Rp125.000<br>3000ml: Rp175.000'
+                },
             ];
 
             const productGrid = document.getElementById('product-grid');
@@ -184,18 +274,28 @@
                 }
 
                 productsToRender.forEach(product => {
-                    const whatsappMessage = `https://wa.me/628128124789?text=Halo%20Dapur%20Berkah%20Ummah,%20saya%20tertarik%20dengan%20produk%20*${encodeURIComponent(product.name)}*%20buatan%20${encodeURIComponent(product.seller)}.%20Apakah%20masih%20tersedia%3F`;
+                    const whatsappMessage = `https://wa.me/${product.phone}?text=Halo%20*${encodeURIComponent(product.seller)}*,%20saya%20tertarik%20dengan%20produk%20*${encodeURIComponent(product.name)}*%20dari%20Dapur%20Berkah%20Ummah.%20Apakah%20masih%20tersedia%3F`;
                     
-                    // PERUBAHAN: Tinggi gambar diubah dari h-56 menjadi h-72 agar lebih tinggi.
+                    // Format harga jika tersedia
+                    const priceHTML = product.price 
+                        ? `<p class="text-teal-600 font-bold text-lg mt-2 mb-1">${new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(product.price)}</p>` 
+                        : '';
+
+                    // --- STRUKTUR KARTU PRODUK ---
                     const productCard = `
-                        <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden group" data-name="${product.name.toLowerCase()}" data-seller="${product.seller.toLowerCase()}">
+                        <div class="product-card bg-white rounded-lg shadow-lg overflow-hidden group flex flex-col" data-name="${product.name.toLowerCase()}" data-seller="${product.seller.toLowerCase()}">
                             <div class="overflow-hidden">
-                                <img src="${product.image}" alt="${product.name}" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https.placehold.co/600x840/e2e8f0/4a5568?text=Gambar+Segera+Hadir';">
+                                <img src="${product.image}" alt="${product.name}" class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.onerror=null;this.src='https://placehold.co/600x840/e2e8f0/4a5568?text=Gambar+Segera+Hadir';">
                             </div>
-                            <div class="p-5">
-                                <h3 class="text-xl font-bold truncate">${product.name}</h3>
-                                <p class="text-gray-500 text-sm mb-4">oleh ${product.seller}</p>
-                                <a href="${whatsappMessage}" target="_blank" class="w-full block text-center bg-teal-500 text-white font-semibold px-4 py-2 rounded-full hover:bg-teal-600 transition duration-300">
+                            <div class="p-5 flex flex-col flex-grow">
+                                <div class="flex-grow">
+                                    <h3 class="text-xl font-bold truncate">${product.name}</h3>
+                                    <p class="text-gray-500 text-sm">oleh ${product.seller}</p>
+                                    ${priceHTML}
+                                    <div class="text-gray-600 text-sm mt-2">${product.description || 'Deskripsi produk belum tersedia.'}</div>
+                                    <p class="text-xs text-gray-500 mt-3 pt-2 border-t">Pembayaran ke Bank BCA: <br><span class="font-semibold text-base">8690233208</span> a/n Rohany</p>
+                                </div>
+                                <a href="${whatsappMessage}" target="_blank" class="w-full block text-center bg-teal-500 text-white font-semibold px-4 py-2 rounded-full hover:bg-teal-600 transition duration-300 mt-4">
                                     <i class="fab fa-whatsapp mr-2"></i> Pesan
                                 </a>
                             </div>
@@ -246,6 +346,4 @@
     </script>
 </body>
 </html>
-
-
 
